@@ -8,8 +8,7 @@ import dark from "./styles/themes/dark";
 import GlobalStyle from "./styles/global";
 
 import Header from "./components/Header";
-import Search from "./components/Search";
-import Button from "./components/Button";
+import Middle from "./components/Middle";
 import Card from "./components/Card";
 
 const App = () => {
@@ -24,8 +23,12 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Header toggleTheme={toggleTheme} />
-        <Search />
-        <Button />
+        <Middle />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
         <Card />
       </ThemeProvider>
     </div>

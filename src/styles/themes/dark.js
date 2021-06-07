@@ -3,8 +3,11 @@ export default {
   title: 'dark',
   
   colors: {
+    logo: '#fff',
+    slogan: '#fff',
+    
     primary: '#333',
-    secundary: '#C62E65',
+    secundary: '#000',
 
     background: '#222',
     text: '#fff'

@@ -5,7 +5,6 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--primary);
   }
 
   html, body, #root {
@@ -22,23 +21,21 @@ export default createGlobalStyle`
   }
 
   html {
-    background: var(--background);
+    background: ${props => props.theme.colors.background};
+  }
+
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
   }
 
   :root {
-    --background: #dadada;
+    --background: #f1f1f1;
     --primary: #000;
     --secondary: #15181C;
     --search: #202327;
     --white: #D9D9D9;
     --gray: #7A7A7A;
     --outline: #2F3336;
-  }
-
-  .container {
-    max-width: 1024px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
   }
 `;
