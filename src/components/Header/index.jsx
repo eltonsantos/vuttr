@@ -26,7 +26,7 @@ const Header = ({ toggleTheme }) => {
           width={40}
           handleDiameter={20}
           offColor={shade(0.15, colors.secundary)}
-          onColor={colors.secundary}
+          onColor={colors.switch}
         />
         <MoonIcon className="text-gray-600 w-7 h-7" />
       </div>
