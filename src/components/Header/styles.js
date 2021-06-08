@@ -9,6 +9,10 @@ export const Logo = styled.h1`
 export const Slogan = styled.span`
   font-family: 'Inter';
   color: ${props => props.theme.colors.slogan};
+
+  @media (max-width: 570px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export const MoonIcon = styled(Moon)`
