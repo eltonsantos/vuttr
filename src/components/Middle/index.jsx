@@ -85,7 +85,7 @@ const Middle = () => {
 
               <div className="mb-4">
                 <label className="text-xl text-gray-600">Description <span className="text-red-500">*</span></label>
-                <textarea rows="5" name="content" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required>
+                <textarea rows="5" name="content" className="w-full px-3 py-2 border-2 rounded-lg" required>
                 </textarea>
               </div>
 
