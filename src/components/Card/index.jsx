@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import { useTheme } from 'styled-components';
 
-import api from "../../services/api";
+import { api } from "../../services/api";
 
 import { Container } from './styles';
 
@@ -17,7 +17,7 @@ const Card = () => {
   useEffect(() => {
     try {
       setTimeout(async () => {
-        const response = await api.get('/tools');
+        const response = await api.get('tools');
         console.log(response.data);
         setIsLoading(false);
         setTools(response.data)
