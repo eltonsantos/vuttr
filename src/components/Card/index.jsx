@@ -17,7 +17,7 @@ const Card = () => {
   useEffect(() => {
     try {
       setTimeout(async () => {
-        const response = await api.get('/tools');
+        const response = await api.get('/');
         console.log(response.data);
         setIsLoading(false);
         setTools(response.data)
