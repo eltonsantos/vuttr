@@ -16,6 +16,10 @@ export const Button = styled.button`
   }
 `;
 
+export const Tag = styled.span`
+  color: ${(props) => props.theme.colors.logo};
+`;
+
 export const Modal = styled.div`
   background: ${(props) => props.theme.colors.bgModal};
 

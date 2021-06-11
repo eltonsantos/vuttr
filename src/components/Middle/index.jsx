@@ -1,4 +1,4 @@
-import { Search, Button, Modal, FormModal } from './styles';
+import { Search, Button, Tag, Modal, FormModal } from './styles';
 
 const Middle = () => {
 
@@ -48,9 +48,15 @@ const Middle = () => {
 
       <div className="my-1 ml-3">
         <Search className="border-2 h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none focus:ring-2" type="text" placeholder="Buscar..." />
+
+        <Tag>
+          <input type="checkbox" className="ml-2 w-4 h-4" />
+          <span className="ml-2 tags">Buscar apenas nas Tags</span>
+        </Tag>
+
       </div>
 
-      <Button type="button" onClick={() => openModal()} className="modal-open mx-auto lg:mx-4 font-extrabold focus:outline-none rounded my-1 mr-3 md:my-1 py-2 px-8 shadow-lg w-48">Add Tool</Button>
+      <Button type="button" onClick={() => openModal()} className="modal-open mx-auto lg:mx-4 font-extrabold focus:outline-none rounded my-1 mr-3 md:my-1 py-2 px-8 shadow-lg w-48 text-sm ml-1">Add Tool</Button>
 
       <div className="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
         <div className="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
@@ -90,13 +96,13 @@ const Middle = () => {
 
             </FormModal>
 
-          <div className="flex justify-end pt-2">
-            <button className="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:text-indigo-400 mr-2">Action</button>
-            <button className="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Close</button>
-          </div>
-        </Modal>
+            <div className="flex justify-end pt-2">
+              <button className="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:text-indigo-400 mr-2">Action</button>
+              <button className="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Close</button>
+            </div>
+          </Modal>
+        </div>
       </div>
-    </div>
 
 
     </div >
