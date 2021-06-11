@@ -55,7 +55,7 @@ const Card = () => {
         (
           // Array(10).fill('').map((tool) => <Skeleton key={tool.id} count={5} />)
           <SkeletonTheme color={theme.colors.skltColor} highlightColor={theme.colors.skltHighLightColor}>
-            <Skeleton className="mt-3" count={40} />
+            <Skeleton className="mt-3 mx-2" count={40} />
           </SkeletonTheme>
         )
       }
