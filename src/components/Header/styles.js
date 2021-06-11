@@ -3,6 +3,7 @@ import { Moon } from '@styled-icons/boxicons-regular/Moon';
 import { Sun } from '@styled-icons/boxicons-regular/Sun';
 
 export const Logo = styled.h1`
+  font-family: 'Roboto', sans-serif;
   color: ${props => props.theme.colors.logo};
 `;
 

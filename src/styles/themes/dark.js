@@ -3,7 +3,7 @@ export default {
   title: 'dark',
   
   colors: {
-    background: '#000',
+    background: '#121214',
     text: '#F5F5F5',
     primary: '#F4D35E',
     secundary: '#000',
@@ -15,20 +15,27 @@ export default {
     borderSearch: '#F7E08D',
     bgSearch: '',
     
-    textButtonAdd: '#000',
-    buttonAdd: '#F4D35E',
-    buttonAddHover: '#F7E08D',
+    txtBtnAdd: '#000',
+    btnAdd: '#F4D35E',
+    btnAddHover: '#F7E08D',
 
-    buttonRemove: '#D9456A',
-    buttonRemoveHover: '#BA264B',
+    btnRemove: '#D9456A',
+    btnRemoveHover: '#BA264B',
 
     border: '#333',
 
-    textLink: '#047857',
-    textLinkHover: '',
+    txtLink: '#047857',
+    txtLinkHover: '',
 
-    textTag: '#ff0',
-    textTagHover: '#F7E08D',
+    txtTag: '#ff0',
+    txtTagHover: '#F7E08D',
+
+    bgModal: '#202024',
+    closeModal: '#87868b',
+    bgInputModal: '#F5F5F5',
+    txtInputModal: '#333',
+    borderModal: '#f5f5f5',
+    btnModal: ''
 
   }
 };

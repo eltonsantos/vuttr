@@ -12,10 +12,10 @@ export const Container = styled.div`
       }
 
       button {
-        color: ${(props) => props.theme.colors.buttonRemove};
+        color: ${(props) => props.theme.colors.btnRemove};
 
         :hover {
-          color: ${(props) => props.theme.colors.buttonRemoveHover};
+          color: ${(props) => props.theme.colors.btnRemoveHover};
         }
       }
     }
@@ -29,10 +29,10 @@ export const Container = styled.div`
     li {
       div {
         a {
-          color: ${(props) => props.theme.colors.textTag};
+          color: ${(props) => props.theme.colors.txtTag};
 
           :hover {
-            color: ${(props) => props.theme.colors.textTagHover};
+            color: ${(props) => props.theme.colors.txtTagHover};
           }
         }
       }

@@ -15,20 +15,26 @@ export default {
     borderSearch: '#06A77D',
     bgSearch: '',
 
-    textButtonAdd: '#f2f2f2',
-    buttonAdd: '#047857',
-    buttonAddHover: '#06A77D',
+    txtBtnAdd: '#f2f2f2',
+    btnAdd: '#047857',
+    btnAddHover: '#06A77D',
 
-    buttonRemove: '#D9456A',
-    buttonRemoveHover: '#BA264B',
+    btnRemove: '#D9456A',
+    btnRemoveHover: '#BA264B',
 
     border: '#d5d5d5',
 
-    textLink: '#06A77D',
-    textLinkHover: '',
+    txtLink: '#06A77D',
+    txtLinkHover: '',
     
-    textTag: '#06A77D',
-    textTagHover: '#047857',
+    txtTag: '#06A77D',
+    txtTagHover: '#047857',
+
+    bgModal: '#F5F5F5',
+    closeModal: '#87868b',
+    bgInputModal: '#F5F5F5',
+    txtInputModal: '#333',
+    borderModal: '#d5d5d5',
 
   }
 };
