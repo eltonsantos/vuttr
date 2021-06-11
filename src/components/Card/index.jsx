@@ -21,7 +21,7 @@ const Card = () => {
       console.log(response.data);
       setIsLoading(false);
       setTools(response.data)
-    }, 9000);
+    }, 2000);
     
   }, [setTools]);
 
