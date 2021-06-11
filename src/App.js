@@ -13,22 +13,17 @@ import Card from "./components/Card";
 
 const App = () => {
   const [theme, setTheme] = usePersistedState("theme", light);
-
+  
   const toggleTheme = () => {
     setTheme(theme.title === "light" ? dark : light);
   };
-
+  
   return (
     <div className="container">
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Header toggleTheme={toggleTheme} />
         <Middle />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
         <Card />
       </ThemeProvider>
     </div>
