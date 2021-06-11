@@ -5,14 +5,7 @@ const Middle = () => {
   function openModal() {
     console.log('entra aqui')
 
-    var openmodal = document.querySelectorAll('.modal-open')
-    for (var i = 0; i < openmodal.length; i++) {
-      openmodal[i].addEventListener('click', function (event) {
-        event.preventDefault()
-        toggleModal();
-      })
-    }
-
+    toggleModal();
     const overlay = document.querySelector('.modal-overlay')
     overlay.addEventListener('click', toggleModal)
 
@@ -34,14 +27,20 @@ const Middle = () => {
       }
     };
 
-    function toggleModal() {
-      const body = document.querySelector('body')
-      const modal = document.querySelector('.modal')
-      modal.classList.toggle('opacity-0')
-      modal.classList.toggle('pointer-events-none')
-      body.classList.toggle('modal-active')
-    }
-
+  }
+  var openmodal = document.querySelectorAll('.modal-open')
+  for (var i = 0; i < openmodal.length; i++) {
+    openmodal[i].addEventListener('click', function (event) {
+      event.preventDefault()
+      toggleModal();
+    })
+  }
+  function toggleModal() {
+    const body = document.querySelector('body')
+    const modal = document.querySelector('.modal')
+    modal.classList.toggle('opacity-0')
+    modal.classList.toggle('pointer-events-none')
+    body.classList.toggle('modal-active')
   }
 
   return (
@@ -71,23 +70,23 @@ const Middle = () => {
 
             <form action="">
               <div className="mb-4">
-                <label className="text-xl text-gray-600">Name <span class="text-red-500">*</span></label>
+                <label className="text-xl text-gray-600">Name <span className="text-red-500">*</span></label>
                 <input type="text" className="border-2 border-gray-300 p-2 w-full" />
               </div>
 
               <div className="mb-4">
-                <label className="text-xl text-gray-600">Link <span class="text-red-500">*</span></label>
+                <label className="text-xl text-gray-600">Link <span className="text-red-500">*</span></label>
                 <input type="text" className="border-2 border-gray-300 p-2 w-full" />
               </div>
 
               <div className="mb-8">
                 <label className="text-xl text-gray-600">Description <span className="text-red-500">*</span></label>
-                <textarea rows="5" name="content" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required>
+                <textarea rows="5" name="content" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required>
                 </textarea>
               </div>
 
               <div className="mb-4">
-                <label className="text-xl text-gray-600">Tags <span class="text-red-500">*</span></label>
+                <label className="text-xl text-gray-600">Tags <span className="text-red-500">*</span></label>
                 <input type="text" className="border-2 border-gray-300 p-2 w-full" />
               </div>
 
