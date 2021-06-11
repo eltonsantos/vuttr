@@ -36,5 +36,8 @@ export default {
     txtInputModal: '#333',
     borderModal: '#d5d5d5',
 
+    skltColor: '#ecebeb',
+    skltHighLightColor: '#f3f3f3'
+
   }
 };

@@ -35,7 +35,9 @@ export default {
     bgInputModal: '#F5F5F5',
     txtInputModal: '#333',
     borderModal: '#f5f5f5',
-    btnModal: ''
+
+    skltColor: '#202020',
+    skltHighLightColor: '#444'
 
   }
 };
