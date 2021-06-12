@@ -2,7 +2,7 @@ const Tags = ({ tags }) => {
 
   return (
     <div className="col-span-3 row-span-1">
-      <ul className="flex flex-row pl-2">
+      <ul className="flex flex-row pl-2 overflow-x-hidden">
         { tags && tags.map((tag, index) => {
           return(
             <li key={index} className="py-1">
