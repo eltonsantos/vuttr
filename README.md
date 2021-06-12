@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+<p align="center">
+  <img alt="VUTTR" src=".github/logo.png" width="500px">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-next-steps">Next steps</a>
+</p>
 
-## Available Scripts
+<h1 align="center">
+  <a href="https://vuttr-eltonsantos.netlify.app" target="_blank">
+    <img alt="VUTTR" title="VUTTR" src=".github/vuttr.gif" />
+  </a>
+</h1>
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+## 🧪 Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project was developed using the following technologies:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [React](https://reactjs.org)
+- [React Switch](https://www.npmjs.com/package/react-switch)
+- [Polished](https://polished.js.org/)
+- [Axios](https://www.npmjs.com/package/axios)
+- [React Loading Skeleton](https://www.npmjs.com/package/react-loading-skeleton)
+- [Tailwind](https://tailwindcss.com/)
+- [Styled Icons](https://styled-icons.js.org/)
+- [Styled Components](https://styled-components.com/)
 
-### `yarn test`
+## 🚀 Getting started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the project and access the folder
 
-### `yarn build`
+```bash
+$ git clone https://github.com/eltonsantos/vuttr.git && cd vuttr
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Follow the steps below
+```bash
+# Install the dependencies
+$ yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Start the project
+$ yarn start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Open another bash tab and start server
+$ npx json-server db.json
+```
+The api will be running on port 3000 and the app in another port.
 
-### `yarn eject`
+## 💻 Project
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This project was developed within the challenge proposed by [BossaBox](https://bossabox.com/). **VUTTR (Very Useful Tools To Remember)** is a simple application to manage tools with their respective names, links, descriptions and tags.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In order for this project to be approved, the following minimum requirements must be met:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- The user can see all available tools.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- The user can add a new tool.
 
-## Learn More
+- The user can remove a tool.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- The user can search for a tool filtering (or not) by tags.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔖 Layout
 
-### Code Splitting
+The layout was created from scratch using the **TailWindCSS** framework.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🐾 Next steps
 
-### Analyzing the Bundle Size
+###### Escreverei essa parte em português
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [ ] Implementar layout infinito para mostrar todas as ferramentas na mesma tela ♾
+- [ ] Adicionar um botão no canto para voltar rapidamente ao topo 🔼
+- [ ] Ajustar alguns detalhes para o Layout ficar bem resposivo e fofo 🥰
+- [ ] Validar os campos para evitar fazerem besteira 🐱‍💻
+- [ ] Login e senha para acessar a api também pode ser uma opção 🔐
+- [ ] E muito mais... ❤💪🏼
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 👨🏻‍💻 Author
 
-### Advanced Configuration
+<h3 align="center">
+  <img style="border-radius: 50%" src="https://avatars3.githubusercontent.com/u/1292594?s=460&u=0b1bfb0fc81256c59dc33f31ce344231bd5a5286&v=4" width="100px;" alt=""/>
+  <br/>
+  <strong>Elton Santos</strong> 🚀
+  <br/>
+  <br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ <a href="https://www.linkedin.com/in/eltonmelosantos" alt="LinkedIn" target="blank">
+    <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white" />
+  </a>
 
-### Deployment
+  <a href="mailto:elton.melo.santos@gmail.com?subject=Olá%20Elton" alt="Email" target="blank">
+    <img src="https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:elton.melo.santos@gmail.com" />
+  </a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<br/>
 
-### `yarn build` fails to minify
+Made with ❤️ by Elton Santos 👋🏽 [Entre em contato!](https://www.linkedin.com/in/eltonmelosantos/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</h3>
