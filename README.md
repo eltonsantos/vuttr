@@ -76,7 +76,7 @@ The layout was created from scratch using the **TailWindCSS** framework.
 
 - [ ] Implementar layout infinito para mostrar todas as ferramentas na mesma tela ♾
 - [ ] Adicionar um botão no canto para voltar rapidamente ao topo 🔼
-- [ ] Ajustar alguns detalhes para o Layout ficar bem resposivo e fofo 🥰
+- [ ] Ajustar alguns detalhes para o Layout ficar bem responsivo e fofo 🥰
 - [ ] Validar os campos para evitar fazerem besteira 🐱‍💻
 - [ ] Login e senha para acessar a api também pode ser uma opção 🔐
 - [ ] E muito mais... ❤💪🏼
