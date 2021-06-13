@@ -13,7 +13,8 @@ const Card = () => {
   const [tools, setTools] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const notify = () => toast.success("Tool add with success!");
+  const notifySuccess = () => toast.success("Tool removed with success!");
+  const notifyError = () => toast.error("Error while removing tool");
 
   useEffect(() => {
     try {
@@ -30,12 +31,21 @@ const Card = () => {
 
   const removeTools = async (id) => {
     try {
-      const response = await api.delete(id);
-      if (response.status === 201) {
-        notify();
-        console.log("Tool removed with sucessfuly");
+
+      const confirmRemoveTool = window.confirm('Are you sure?');
+
+      if (confirmRemoveTool === true) {
+        const response = await api.delete(`/tools/${id}/`);
+        if (response.status === 200) {
+          notifySuccess();
+          console.log(`${id} removed with sucessfuly`);
+        }
       }
+
+      window.location.reload();
+
     } catch (e) {
+      notifyError();
       console.log(e);
     }
   }
@@ -43,7 +53,7 @@ const Card = () => {
   return (
     <>
       <ToastContainer />
-      { !isLoading ?
+      {!isLoading ?
         (tools.map(tool => (
           <Container key={tool.id} className="mt-5 border-dashed border-4 rounded-lg">
             <div className="loader"></div>

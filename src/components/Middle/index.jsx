@@ -6,11 +6,13 @@ import { Search, Button, Tag, Modal, FormModal } from './styles';
 
 const Middle = () => {
 
-  const [name, setName] = useState('');
+  const [title, setTitle] = useState('');
   const [link, setLink] = useState('');
   const [description, setDescription] = useState('');
   const [tags, setTags] = useState('');
-  const notify = () => toast.success("Tool add with success!");
+
+  const notifySuccess = () => toast.success("Tool add with success!");
+  const notifyError = () => toast.error("Error while adding tool");
 
   function openModal() {
     console.log('entra aqui')
@@ -59,22 +61,23 @@ const Middle = () => {
 
       const splitTags = tags.split(" ");
       const response = await api.post("/tools", {
-        name,
+        title,
         link,
         description,
         tags: splitTags,
       });
 
       if (response.status === 201) {
-        notify();
+        notifySuccess();
         console.log("Tool created with sucessfuly");
       }
 
     } catch (e) {
+      notifyError();
       console.log(e)
     }
 
-    setName('');
+    setTitle('');
     setLink('');
     setDescription('');
     setTags('');
@@ -114,8 +117,8 @@ const Middle = () => {
 
             <FormModal onSubmit={addTools}>
               <div className="mb-4">
-                <label className="text-xl">Name <span className="text-red-500">*</span></label>
-                <input type="text" className="border-2 p-2 w-full rounded-lg" value={name} onChange={(e) => setName(e.target.value)} />
+                <label className="text-xl">Title <span className="text-red-500">*</span></label>
+                <input type="text" className="border-2 p-2 w-full rounded-lg" value={title} onChange={(e) => setTitle(e.target.value)} />
               </div>
 
               <div className="mb-4">
