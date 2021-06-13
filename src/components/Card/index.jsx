@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import { useTheme } from 'styled-components';
-
 import { api } from "../../services/api";
-
 import { Container } from './styles';
-
 import Tags from '../Tags';
 
 const Card = () => {
@@ -14,10 +13,12 @@ const Card = () => {
   const [tools, setTools] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  const notify = () => toast.success("Tool add with success!");
+
   useEffect(() => {
     try {
       setTimeout(async () => {
-        const response = await api.get('tools');
+        const response = await api.get('/tools');
         console.log(response.data);
         setIsLoading(false);
         setTools(response.data)
@@ -27,8 +28,21 @@ const Card = () => {
     }
   }, [setTools, setIsLoading]);
 
+  const removeTools = async (id) => {
+    try {
+      const response = await api.delete(id);
+      if (response.status === 201) {
+        notify();
+        console.log("Tool removed with sucessfuly");
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   return (
     <>
+      <ToastContainer />
       { !isLoading ?
         (tools.map(tool => (
           <Container key={tool.id} className="mt-5 border-dashed border-4 rounded-lg">
@@ -38,7 +52,7 @@ const Card = () => {
                 <a className="flex items-center no-underline hover:underline text-lg font-semibold" href={tool.link}>
                   {tool.title}
                 </a>
-                <button className="font-semibold">Remove</button>
+                <button onClick={(id) => removeTools(tool.id)} className="font-semibold">Remove</button>
               </div>
             </div>
 

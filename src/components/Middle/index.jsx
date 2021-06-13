@@ -1,6 +1,16 @@
+import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { api } from "../../services/api";
 import { Search, Button, Tag, Modal, FormModal } from './styles';
 
 const Middle = () => {
+
+  const [name, setName] = useState('');
+  const [link, setLink] = useState('');
+  const [description, setDescription] = useState('');
+  const [tags, setTags] = useState('');
+  const notify = () => toast.success("Tool add with success!");
 
   function openModal() {
     console.log('entra aqui')
@@ -43,8 +53,38 @@ const Middle = () => {
     body.classList.toggle('modal-active')
   }
 
+  const addTools = async (e) => {
+    try {
+      e.preventDefault();
+
+      const splitTags = tags.split(" ");
+      const response = await api.post("/tools", {
+        name,
+        link,
+        description,
+        tags: splitTags,
+      });
+
+      if (response.status === 201) {
+        notify();
+        console.log("Tool created with sucessfuly");
+      }
+
+    } catch (e) {
+      console.log(e)
+    }
+
+    setName('');
+    setLink('');
+    setDescription('');
+    setTags('');
+
+  }
+
   return (
     <div className="flex justify-between">
+
+      <ToastContainer />
 
       <div className="my-1 ml-3">
         <Search className="border-2 h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none focus:ring-2" type="text" placeholder="Buscar..." />
@@ -72,34 +112,32 @@ const Middle = () => {
               </div>
             </div>
 
-            <FormModal action="">
+            <FormModal onSubmit={addTools}>
               <div className="mb-4">
                 <label className="text-xl">Name <span className="text-red-500">*</span></label>
-                <input type="text" className="border-2 p-2 w-full rounded-lg" />
+                <input type="text" className="border-2 p-2 w-full rounded-lg" value={name} onChange={(e) => setName(e.target.value)} />
               </div>
 
               <div className="mb-4">
                 <label className="text-xl">Link <span className="text-red-500">*</span></label>
-                <input type="text" className="border-2 p-2 w-full rounded-lg" />
+                <input type="text" className="border-2 p-2 w-full rounded-lg" value={link} onChange={(e) => setLink(e.target.value)} />
               </div>
 
               <div className="mb-4">
                 <label className="text-xl text-gray-600">Description <span className="text-red-500">*</span></label>
-                <textarea rows="5" name="content" className="w-full px-3 py-2 border-2 rounded-lg" required>
+                <textarea rows="5" className="w-full px-3 py-2 border-2 rounded-lg" value={description} onChange={(e) => setDescription(e.target.value)} >
                 </textarea>
               </div>
 
               <div className="mb-4">
                 <label className="text-xl">Tags <span className="text-red-500">*</span></label>
-                <input type="text" className="border-2 p-2 w-full rounded-lg" />
+                <input type="text" className="border-2 p-2 w-full rounded-lg" value={tags}onChange={(e) => setTags(e.target.value)} />
               </div>
 
+              <div className="flex justify-end pt-2">
+                <button type="submit" className="px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Action</button>
+              </div>
             </FormModal>
-
-            <div className="flex justify-end pt-2">
-              <button className="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:text-indigo-400 mr-2">Action</button>
-              <button className="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400">Close</button>
-            </div>
           </Modal>
         </div>
       </div>
